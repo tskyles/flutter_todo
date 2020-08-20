@@ -20,6 +20,6 @@ class Todo {
   Map<String, dynamic> toDatabaseJSON() => {
         "id": this.id,
         "description": this.description,
-        "isDone": this.isDone == false ? 0 : 1,
+        "is_done": this.isDone == false ? 0 : 1,
       };
 }

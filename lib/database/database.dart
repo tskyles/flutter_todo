@@ -36,7 +36,10 @@ class DatabaseProvider {
     await database.execute("CREATE TABLE $todoTABLE ("
         "id INTEGER PRIMARY KEY, "
         "description TEXT, "
-        "is_done INTEGER, "
+        /*SQLITE doesn't have boolean type
+        so we store isDone as integer where 0 is false
+        and 1 is true*/
+        "is_done INTEGER "
         ")");
   }
 }
