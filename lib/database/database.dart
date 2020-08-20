@@ -5,7 +5,7 @@ import 'package:path/path.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:sqflite/sqflite.dart';
 
-final todoTable = 'Todo';
+final todoTABLE = 'Todo';
 
 class DatabaseProvider {
   static final DatabaseProvider dbProvider = DatabaseProvider();
@@ -33,7 +33,7 @@ class DatabaseProvider {
   }
 
   void initDB(Database database, int version) async {
-    await database.execute("CREATE TABLE $todoTable ("
+    await database.execute("CREATE TABLE $todoTABLE ("
         "id INTEGER PRIMARY KEY, "
         "description TEXT, "
         "is_done INTEGER, "
